@@ -1,7 +1,7 @@
 # libft
 A c library for my 42 school projects
 
-#***********Still in construction ******************
+# ***********Still in construction ******************
 
 It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus another functions developed in other 42 school projects.
 
