@@ -19,15 +19,17 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 
 ### [Libft](https://github.com/sgkhusal/42-libft) Functions
 
-* ```int ft_atoi(const char *nptr)```: transforms a string of number in an int and returns the int value
-* ```char	*ft_itoa(int n)```: returns a string to a given int number
 * ```int ft_isalpha(int c)```: returns 1 if c is an alphabetic character and 0 if no
-* ```int ft_isdigit(int c)```: returns 1 if c is a number character and 0 if no
 * ```int ft_isalnum(int c)```: returns 1 if c is a alphanumeric character and 0 if no
 * ```int ft_isascii(int c)```: returns 1 if c is an ascii character and 0 if no
+* ```int ft_isdigit(int c)```: returns 1 if c is a number character and 0 if no
 * ```int ft_isprint(int c)```: returns 1 if c is a printable character and 0 if no
+
+* ```char	*ft_itoa(int n)```: returns a string to a given int number
+* ```int ft_atoi(const char *nptr)```: transforms a string of number in an int and returns the int value
 * ```int ft_toupper(int c)```: if is an alphabetic character returns the upper case character, else return the character  
 * ```int ft_tolower(int c)```: if is an alphabetic character returns the lower case character, else return the character
+
 * ```void	ft_bzero(void *s, size_t len)```:
 * ```void	*ft_calloc(size_t nmemb, size_t size)```:
 * ```void	*ft_memset(void *buffer, int c, size_t len)```:
@@ -36,12 +38,12 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 * ```void	*ft_memmove(void *dest, const void *src, size_t n)```:
 * ```void	*ft_memchr(const void *s, int c, size_t n)```:
 * ```int  ft_memcmp(const void *s1, const void *s2, size_t n)```:
+
 * ```void	ft_putchar_fd(char c, int fd)```: Outputs the character ’c’ to the given file descriptor.
 * ```void	ft_putstr_fd(char *s, int fd)```: Outputs the string ’s’ to the given file descriptor.
-* ```void	ft_putendl_fd(char *s, int fd)```: Outputs the string ’s’ to the given file
-descriptor, followed by a newline.
-* ```void	ft_putnbr_fd(int n, int fd)```: Outputs the integer ’n’ to the given file
-descriptor.
+* ```void	ft_putendl_fd(char *s, int fd)```: Outputs the string ’s’ to the given file descriptor, followed by a newline.
+* ```void	ft_putnbr_fd(int n, int fd)```: Outputs the integer ’n’ to the given file descriptor.
+
 * ```size_t	ft_strlen(const char *str)```: return the string size
 * ```size_t	ft_strlcpy(char *dest, const char *src, size_t size)```:
 * ```size_t	ft_strlcat (char *dst, const char *src, size_t size)```:
