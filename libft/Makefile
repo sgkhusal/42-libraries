@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 02:08:39 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/16 16:57:31 by coder            ###   ########.fr        #
+#    Updated: 2022/02/16 19:44:11 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,13 @@
 
 # Variables
 
-NAME		= libft.a
+NAME =		libft.a
+HEADER =	./src/libft.h
 
-SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
+SRC_PATH =	./src
+OBJ_PATH =	./obj
+
+SRC_FILES	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 				ft_memmove.c ft_memchr.c ft_memcmp.c \
 				ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
 				ft_strrchr.c ft_strnstr.c ft_strncmp.c \
@@ -24,41 +28,38 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 				ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c \
 				ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 				ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-
-OBJ_PATH =	./obj
-
-OBJS		= $(SRC:%.c=$(OBJ_PATH)/%.o)
-
-BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+				ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 
-BONUSOBJS	= $(BONUS:%.c=$(OBJ_PATH)/%.o)
+SRCS =		$(addprefix $(SRC_PATH)/, $(SRC_FILES))
+OBJS =		$(SRCS:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 
+# compilation
 CC =		gcc
-
 CFLAGS =	-Wall -Wextra -Werror
 
-RM =		rm -f
+# clean
+RM		= rm -f
 RM_DIR =	rm -rf
 
 # Rules
 
 all:	$(NAME)
 
-$(OBJ_PATH)/%.o:	%.c
-		@mkdir -p $(OBJ_PATH)
-		@$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ_PATH)/%.o:	$(SRC_PATH)/%.c
+	@mkdir -p $(OBJ_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME):	$(OBJS) $(BONUSOBJS)
-		@ar rc $@ $(OBJS) $(BONUSOBJS)
-		@ranlib $@
+$(NAME):	$(OBJS) $(HEADER)
+	ar rc $@ $(OBJS)
+	ranlib $@
 
 clean:
-		@$(RM_DIR) $(OBJ_PATH)
+	@$(RM_DIR) $(OBJ_PATH)
 
 fclean:		clean
-		@$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re:		fclean all
 
