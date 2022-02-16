@@ -15,9 +15,9 @@
 ##### Variables #####
 
 # Gnl folder path
-GNL_PATH	= ../gnl/
-LIBFT_PATH	= ../libft
-LIBFT		= ../libft/libft.a
+GNL_PATH	= ../../gnl/
+LIBFT_PATH	= ../../libft
+LIBFT		= ../../libft/libft.a
 
 # Gnl Sources
 FILES		= get_next_line.c get_next_line_utils.c

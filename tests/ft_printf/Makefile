@@ -14,8 +14,8 @@
 # UPDATE THE FOLLOWING PATHS FOR THE TEST WORK WITH YOUR FT_PRINTF:
 # **************************************************************************** #
 # ft_printf source path - where is the makefile that compiles ft_printf
-PRINTF_PATH =		../ft_printf/
-LIBFT_PATH =		../ft_printf/
+PRINTF_PATH =		../../ft_printf/
+LIBFT_PATH =		../../ft_printf/
 
 # libftprintf.a path
 PRINTF =			$(PRINTF_PATH)libftprintf.a
