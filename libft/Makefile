@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 02:08:39 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/16 16:16:00 by coder            ###   ########.fr        #
+#    Updated: 2022/02/16 16:57:31 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,24 +26,28 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 				ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-OBJS		= $(SRCS:.c=.o)
+OBJ_PATH =	./obj
+
+OBJS		= $(SRC:%.c=$(OBJ_PATH)/%.o)
 
 BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 
-BONUSOBJS	= $(BONUS:.c=.o)
+BONUSOBJS	= $(BONUS:%.c=$(OBJ_PATH)/%.o)
 
-CC		= gcc
+CC =		gcc
 
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS =	-Wall -Wextra -Werror
 
-RM		= rm -f
+RM =		rm -f
+RM_DIR =	rm -rf
 
 # Rules
 
 all:	$(NAME)
 
-%.o:	%.c
+$(OBJ_PATH)/%.o:	%.c
+		@mkdir -p $(OBJ_PATH)
 		@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS) $(BONUSOBJS)
@@ -51,10 +55,10 @@ $(NAME):	$(OBJS) $(BONUSOBJS)
 		@ranlib $@
 
 clean:
-		$(RM) $(OBJS) $(BONUSOBJS)
+		@$(RM_DIR) $(OBJ_PATH)
 
 fclean:		clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
 
 re:		fclean all
 
