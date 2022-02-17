@@ -8,7 +8,7 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 
 ## Using the library
 
-* clone this repo
+* clone this repo: ```git clone https://github.com/sgkhusal/42-libraries.git```
 * ```cd 42-libraries/libft```
 * run ```make ```
 * Include the header libft.h in your C projects:
