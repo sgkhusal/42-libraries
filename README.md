@@ -1,4 +1,4 @@
-###################Some c library for my 42 school projects###################
+##################################### Some c library for my 42 school projects #####################################
 
 *Note: The code is written in C language and thus needs the gcc/clang compiler and some standard C libraries to run*
 
