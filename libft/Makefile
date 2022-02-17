@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 02:08:39 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/16 19:44:11 by coder            ###   ########.fr        #
+#    Updated: 2022/02/17 16:29:10 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,8 +63,8 @@ $(OBJ_PATH)/%.o:	$(GNL_PATH)/%.c
 	@$(CC) $(CFLAGS) $(GNLFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS) $(OBJS_GNL) #$(HEADER) $(GNL_HEADER)
-	ar rc $@ $(OBJS) $(OBJS_GNL)
-	ranlib $@
+	@ar rc $@ $(OBJS) $(OBJS_GNL)
+	@ranlib $@
 
 clean:
 	@$(RM_DIR) $(OBJ_PATH)
