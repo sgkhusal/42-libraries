@@ -71,6 +71,7 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 ### [Get-Next-Line](https://github.com/sgkhusal/42-GNL) Function
 
 ```int		get_next_line(int fd, char **line)``` - read from a file descriptor and returns in pointer \*\*line a new line (\n)
+
 **Returns values:**
 * 1: a line has been read
 * 0: reached EOF
