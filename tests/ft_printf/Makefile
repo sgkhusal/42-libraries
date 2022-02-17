@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 17:03:39 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/16 21:11:19 by coder            ###   ########.fr        #
+#    Updated: 2022/02/17 16:18:21 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@
 # **************************************************************************** #
 # ft_printf source path - where is the makefile that compiles ft_printf
 PRINTF_PATH =		../../ft_printf/
-LIBFT_PATH =		../../ft_printf/
+LIBFT_PATH =		../../libft/
 
-# libftprintf.a path
+# libft.a and libftprintf.a path
 PRINTF =			$(PRINTF_PATH)libftprintf.a
-LIBFT =			$(LIBFT_PATH)libftprintf.a
+LIBFT =			$(LIBFT_PATH)libft.a
 
 # **************************************************************************** #
 
