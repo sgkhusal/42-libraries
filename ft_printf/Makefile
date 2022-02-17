@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 17:01:10 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/16 21:08:12 by coder            ###   ########.fr        #
+#    Updated: 2022/02/17 16:00:48 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,18 +45,18 @@ bonus:	$(NAME)
 
 $(OBJ_PATH)/%.o:	$(SRC_PATH)/%.c
 	@mkdir -p $(OBJ_PATH)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
-		ar rc $@ $(OBJ)
-		ranlib $@
+	@ar rc $@ $(OBJ)
+	@ranlib $@
 
 clean:
-		$(RM) $(OBJ)
-		$(RM_DIR) $(OBJ_PATH)
+	@$(RM) $(OBJ)
+	@$(RM_DIR) $(OBJ_PATH)
 
 fclean:		clean
-		$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re:			fclean all
 
