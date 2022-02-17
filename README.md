@@ -1,6 +1,6 @@
 Some c library for my 42 school projects
 
-_Note: The code is written in C language and thus needs the gcc/clang compiler and some standard C libraries to run
+*Note: The code is written in C language and thus needs the gcc/clang compiler and some standard C libraries to run*
 
 # libft.a
 
