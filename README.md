@@ -15,7 +15,7 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 ```
 #include "<path>/libft/src/libft.h"
 ```
-* During compilation use ```<path>/libft/libft.a```
+* For compilation add ```<path>/libft/libft.a```
 
 ## Functions in the library
 
@@ -92,7 +92,7 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 ```
 #include "<path>/ft_printf/ft_printf.h"
 ```
-* During compilation use ```<path>/ft_printf/libftprintf.a <path>/libft/libft.a```
+* For compilation add ```<path>/ft_printf/libftprintf.a <path>/libft/libft.a```
 
 ## Functions in the library:
 
