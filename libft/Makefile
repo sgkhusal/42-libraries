@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: sguilher <sguilher@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 02:08:39 by sguilher          #+#    #+#              #
-#    Updated: 2022/02/17 16:29:10 by coder            ###   ########.fr        #
+#    Updated: 2022/04/01 19:46:01 by sguilher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@
 NAME =			libft.a
 
 HEADER =		./src/libft.h
-GNL_HEADER =	../gnl/get_next_line.h
+GNL_HEADER =	./src/gnl/get_next_line.h
 
 SRC_PATH =	./src
-GNL_PATH =	../gnl
+GNL_PATH =	./src/gnl
 OBJ_PATH =	./obj
 
 SRC_FILES	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
@@ -36,7 +36,6 @@ SRC_FILES	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 GNL_FILES =		get_next_line.c get_next_line_utils.c
 
-#SRC_FILES =				$(SO_LONG_FILES) $(LIBFT_FILES) $(GNL_FILES)
 SRCS =		$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 SRCS_GNL =	$(addprefix $(GNL_PATH)/, $(GNL_FILES))
 OBJS =		$(SRCS:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
