@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sguilher <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sguilher <sguilher@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 21:34:27 by sguilher          #+#    #+#             */
-/*   Updated: 2021/07/02 21:34:43 by sguilher         ###   ########.fr       */
+/*   Updated: 2022/04/01 18:07:26 by sguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int	get_next_line(int fd, char **line)
 	ft_clean(&next[fd]);
 	if (*line == NULL)
 		nl = MALLOC_ERROR;
-	if (nl == 1)
+	if (nl == 1 && tmp[0])
 		next[fd] = tmp;
 	else
 		ft_clean(&tmp);
