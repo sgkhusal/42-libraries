@@ -17,7 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "../libft/src/libft.h"
+# include "../../libft/src/libft.h"
 
 # define STDOUT	1
 # define CONVERSIONS "cspdiuxX"
