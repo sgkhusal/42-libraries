@@ -29,6 +29,7 @@ It Uses [libft project](https://github.com/sgkhusal/42-libft) functions plus ano
 
 * ```char	*ft_itoa(int n)``` - returns a string to a given int number
 * ```int ft_atoi(const char *nptr)``` - transforms a string of number in an int and returns the int value
+* ```long int ft_atol(const char *nptr)``` - transforms a string of number in an long int and returns the long int value
 * ```int ft_toupper(int c)``` - if is an alphabetic character returns the upper case character, else return the character  
 * ```int ft_tolower(int c)``` - if is an alphabetic character returns the lower case character, else return the character
 
